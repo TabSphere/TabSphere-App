@@ -1,0 +1,273 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ff6a00;
+  padding: 1rem 2rem;
+  color: white;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  color: white;
+  font-weight: 600;
+}
+
+.login-btn {
+  background: white;
+  color: #ff6a00;
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+/* Dropdown */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: white;
+  top: 100%;
+  left: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  min-width: 180px;
+  z-index: 10;
+}
+
+.dropdown-content li {
+  padding: 0.5rem 1rem;
+}
+
+.dropdown-content li a {
+  color: #333;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Hero Slider */
+.hero-slider {
+  position: relative;
+  height: 480px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  background: rgba(0,0,0,0.4);
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 800px;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+}
+
+.highlight {
+  color: #ffa500;
+}
+
+.cta-btn, .cta-outline-btn {
+  display: inline-block;
+  margin: 1rem 0.5rem 0 0.5rem;
+  padding: 0.7rem 1.6rem;
+  font-weight: bold;
+  border-radius: 50px;
+  transition: 0.3s;
+}
+
+.cta-btn {
+  background: #ff6a00;
+  color: white;
+}
+
+.cta-btn:hover {
+  background: #e95b00;
+}
+
+.cta-outline-btn {
+  border: 2px solid #ff6a00;
+  color: #ff6a00;
+  background: transparent;
+}
+
+.cta-outline-btn:hover {
+  background: #ff6a00;
+  color: white;
+}
+
+/* Metrics Section */
+.metrics {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  background: #f5f5f5;
+  padding: 2rem 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Services Section */
+.services {
+  padding: 3rem 2rem;
+  background: white;
+  text-align: center;
+}
+
+.services h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #ff6a00;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.service-box {
+  background: #f3f3f3;
+  padding: 1.5rem;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.service-box:hover {
+  background: #ffecd9;
+}
+
+/* Testimonials */
+.testimonials {
+  background: #ffe3c4;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.testimonial {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: left;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.testimonial img {
+  width: 50px;
+  border-radius: 50%;
+  margin-bottom: 0.5rem;
+}
+
+.testimonial .stars {
+  color: gold;
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+/* Call to Action Footer */
+.cta-footer {
+  padding: 3rem 2rem;
+  background: #fff3e6;
+  text-align: center;
+}
+
+.cta-footer h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Footer */
+footer {
+  background: #111;
+  color: #ccc;
+  padding: 2rem;
+}
+
+.footer-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #ffa500;
+}
+
+footer strong {
+  color: white;
+}
+
+.copyright {
+  text-align: center;
+  font-size: 0.8rem;
+  border-top: 1px solid #333;
+  padding-top: 1rem;
+}
